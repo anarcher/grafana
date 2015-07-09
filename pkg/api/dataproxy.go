@@ -21,6 +21,7 @@ var dataProxyTransport = &http.Transport{
 		Timeout:   30 * time.Second,
 		KeepAlive: 30 * time.Second,
 	}).Dial,
+	DisableKeepAlives:   true,
 	TLSHandshakeTimeout: 10 * time.Second,
 }
 
